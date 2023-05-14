@@ -5,54 +5,630 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--网站小图标-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://foronestar.github.io/test-html01/source/ico/ico_M01/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://foronestar.github.io/test-html01/source/ico/ico_M01/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://foronestar.github.io/test-html01/source/ico/ico_M01/favicon-16x16.png"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid #333;
+      }*/
+
+      .flex {
+        display: flex;
+      }
+      /* 占满比例 */
+      .flex1 {
+        flex: 1;
+      }
+      /* 竖向 */
+      .column {
+        flex-direction: column;
+      }
+      /* 阴影 */
+      /* .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }/
+      /* 白色背景 */
+      .baiSe {
+        background-color: #fff;
+      }
+      /* 上下左右外边距 */
+      .mg8 {
+        margin: 8px;
+      }
+      /* 右外边距 */
+      .mgr8 {
+        margin-right: 8px;
+      }
+      /* 上外边距 */
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .buMen {
+        margin: 10px;
+        padding: 10px;
+      }
+      .leiBie {
+        padding: 10px 20px;
+        font-size: 14px;
+        color: rgb(112, 96, 149);
+      }
+      .wangZhan {
+        width: 120px;
+        height: 100px;
+      }
+      .bumenLan {
+        height: 160px;
+      }
+      .siteName{
+        font-size:12px;
+        color:#666;
+        padding
+      }
+    </style>
   </head>
-  <body>
-    <div style="background-color: #f1f1f1; text-align: center; padding: 40px">
-      <a href="https://foronestar.github.io/test-html01">
-        <img
-          src="https://foronestar.github.io/test-html01/source/gif/git_hutao01.gif"
-          alt="pic died"
-          width="80px"
-          height="80px"
-        />
-      </a>
-    </div>
-    <div
-      style="
-        max-width: 800px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.7;
-        text-align: center;
-        border: 1px solid;
-      "
-    >
-      <a
-        href="https://www.twitter.com"
+  <body class="flex column">
+    <!--导航栏-->
+    <div class="flex yinYing" style="height=60px;background-color:#ffffff">
+      <!--网站小图像和名字-->
+      <div
+        class="flex"
+        style="padding: 10px; align-items: center; width: 120px"
+      >
+        <a
+          class="flex"
+          style="justify-content: center"
+          href="https://foronestar.github.io/test-html01"
+        >
+          <img
+            src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+            alt="Pic error!"
+            width="40px"
+            height="40px"
+          />
+          <div
+            class="flex"
+            style="text-align: center; font-size: 14px; padding: 10px 5px"
+          >
+            My主页
+          </div>
+        </a>
+      </div>
+      <!--网站公告-->
+      <div
+        class="flex flex1 column"
         style="
-          height: 30px;
-          background-color: rgb(217, 240, 240);
-          text-align: center;
+          height: 60px;
+          margin: 0px;
+          font-size: 10px;
+          color: #333;
+          justify-content: center;
+          line-height: 1.7;
+          text-align: left;
         "
       >
-        推荐网站1
-      </a>
-
-      <p>推荐网站2</p>
-      <p>推荐网站3</p>
-      <p>推荐网站4</p>
-      <p>推荐网站5</p>
+        <p style="height: 15px; padding: 0px 5px; margin: 1px">
+          welcome to this website~
+        </p>
+      </div>
+      <!--联系方式-->
+      <div class="flex" style="width: 60px; height: 60px; align-self: end">
+        <a
+          href="http://telegram.org"
+          style="line-height: 60px; text-align: center; font-size: 14px"
+          >Chat me
+        </a>
+      </div>
     </div>
-    <div
-      style="
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 40px;
-        font-size: 12px;
-      "
-    >
-      <p>我的网站</p>
-      <a href="https://github.com/ForoneStar/test-html01">友情链接</a>
+    <!--部门栏-->
+    <div class="flex flex1 column mg8" style="z-index: 1">
+      <!--部门一-->
+      <div class="bumenLan baiSe yinYing mgt8">
+        <!--部门名字-->
+        <div
+          class="leiBie"
+          style="padding: 10px 20px; font-size: 14px; color: #666"
+        >
+          搜索引擎
+        </div>
+        <!--推荐总框-->
+        <div class="flex flex1" style="justify-content: space-around">
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--部门二-->
+      <div class="bumenLan baiSe yinYing mgt8">
+        <!--部门名字-->
+        <div
+          class="leiBie"
+          style="padding: 10px 20px; font-size: 14px; color: #666"
+        >
+          搜索引擎
+        </div>
+        <!--推荐总框-->
+        <div class="flex flex1" style="justify-content: space-around">
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--部门三-->
+      <div class="bumenLan baiSe yinYing mgt8">
+        <!--部门名字-->
+        <div
+          class="leiBie"
+          style="padding: 10px 20px; font-size: 14px; color: #666"
+        >
+          搜索引擎
+        </div>
+        <!--推荐总框-->
+        <div class="flex flex1" style="justify-content: space-around">
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--部门四-->
+      <div class="bumenLan baiSe yinYing mgt8">
+        <!--部门名字-->
+        <div
+          class="leiBie"
+          style="padding: 10px 20px; font-size: 14px; color: #666"
+        >
+          搜索引擎
+        </div>
+        <!--推荐总框-->
+        <div class="flex flex1" style="justify-content: space-around">
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+          <!--推荐内容-->
+          <div
+            class="flex wangZhan column"
+            style="align-items: center; justify-content: center"
+          >
+            <!--推荐内容的图片-->
+            <div
+              class="flex"
+              style="width: 40px; height: 40px; padding: 5px 40px"
+            >
+              <a href="https://www.baidu.com">
+                <img
+                  src="https://foronestar.github.io/test-html01/source/ico/ico_M01/android-chrome-192x192.png"
+                  width="40px"
+                  height="40px"
+                  alt="Pic icon error!"
+                />
+              </a>
+            </div>
+            <!--推荐内容的名字-->
+            <div
+              class="flex flex1 siteName"
+              style="height: 20px; padding: 15px; text-align: center"
+            >
+              <a href="https://www.baidu.com">推荐网站一</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
